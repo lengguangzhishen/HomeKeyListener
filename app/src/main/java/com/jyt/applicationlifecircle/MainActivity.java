@@ -16,7 +16,13 @@ public class MainActivity extends Baseactivity {
         setContentView(R.layout.activity_main);
 
         homeReceiver = new HomeReceiver();
-        homeFilter = new IntentFilter(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
+        homeFilter = new IntentFilter();
+        homeFilter.addAction(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
+        homeFilter.addAction(Intent.ACTION_SCREEN_ON);
+        homeFilter.addAction(Intent.ACTION_SCREEN_OFF);
+        homeFilter.addAction(Intent.ACTION_USER_BACKGROUND);
+        homeFilter.addAction(Intent.ACTION_USER_FOREGROUND);
+        homeFilter.addAction(Intent.ACTION_USER_PRESENT);
         registerReceiver(homeReceiver, homeFilter);
 
     }

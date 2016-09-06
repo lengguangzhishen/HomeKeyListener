@@ -44,6 +44,25 @@ public class HomeReceiver extends BroadcastReceiver {
                 }
 
             }
+
+            if (action.equals(Intent.ACTION_SCREEN_ON)) {
+                Log.e(LOG_TAG, "screen_on");
+            }
+
+            if (action.equals(Intent.ACTION_SCREEN_OFF)) {
+                Log.e(LOG_TAG, "screen_off");
+            }
+            if (action.equals(Intent.ACTION_USER_BACKGROUND)) {
+                Log.e(LOG_TAG, "background");
+            }
+
+            if (action.equals(Intent.ACTION_USER_FOREGROUND)) {
+                Log.e(LOG_TAG, "foreground");
+            }
+
+            if (action.equals(Intent.ACTION_USER_PRESENT)) {
+                Log.e(LOG_TAG, "unlock");
+            }
         }
 
     }
